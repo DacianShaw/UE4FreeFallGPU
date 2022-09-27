@@ -1,0 +1,276 @@
+Begin Object Class=/Script/Engine.Material Name="VelocityUpdate_mat"
+   Begin Object Class=/Script/Engine.MaterialExpressionAdd Name="MaterialExpressionAdd_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionCollectionParameter Name="MaterialExpressionCollectionParameter_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionComment Name="MaterialExpressionComment_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionCustom Name="MaterialExpressionCustom_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionCustom Name="MaterialExpressionCustom_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionCustom Name="MaterialExpressionCustom_2"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionCustom Name="MaterialExpressionCustom_3"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionCustom Name="MaterialExpressionCustom_4"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionDivide Name="MaterialExpressionDivide_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_2"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_3"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_4"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureObjectParameter Name="MaterialExpressionTextureObjectParameter_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureObjectParameter Name="MaterialExpressionTextureObjectParameter_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureProperty Name="MaterialExpressionTextureProperty_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_3"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionVectorParameter Name="MaterialExpressionVectorParameter_0"
+   End Object
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   Begin Object Name="MaterialExpressionAdd_1"
+      A=(Expression=MaterialExpressionCustom'"VelocityUpdate_mat:MaterialExpressionCustom_4"')
+      B=(Expression=MaterialExpressionCustom'"VelocityUpdate_mat:MaterialExpressionCustom_3"')
+      MaterialExpressionEditorX=112
+      MaterialExpressionEditorY=-32
+      MaterialExpressionGuid=D1CF68DC48B745FC245D5296CD042451
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionCollectionParameter_0"
+      Collection=MaterialParameterCollection'"/Game/Materials/ParametersCollection.ParametersCollection"'
+      ParameterName="Range"
+      ParameterId=EC910D914AAD72C359AD7A84BB4D456E
+      MaterialExpressionEditorX=-1264
+      MaterialExpressionEditorY=400
+      MaterialExpressionGuid=F51527314EC4C6A92029E1AC8BAF9F26
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionComment_1"
+      SizeX=320
+      SizeY=1008
+      Text="Flocking"
+      MaterialExpressionEditorX=-304
+      MaterialExpressionEditorY=-1504
+      MaterialExpressionGuid=C96170BA4FEA72066D0FD5A7A4DABF1D
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionCustom_0"
+      Code="#include \"/Project/separation.ush\"\r\nreturn 1;"
+      Description="separation"
+      Inputs(0)=(InputName="Tex")
+      Inputs(1)=(InputName="scale")
+      Inputs(2)=(InputName="currentPos",Input=(Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      Inputs(3)=(InputName="currentVel",Input=(Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      Inputs(4)=(InputName="Mode")
+      Inputs(5)=(InputName="playerPos",Input=(Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      MaterialExpressionEditorX=-272
+      MaterialExpressionEditorY=-1344
+      MaterialExpressionGuid=B772E92042495B0425D888A347782661
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionCustom_1"
+      Code="#include \"/Project/cohesion.ush\"\r\nreturn 1;"
+      Description="cohesion"
+      Inputs(0)=(InputName="Tex")
+      Inputs(1)=(InputName="scale")
+      Inputs(2)=(InputName="currentPos",Input=(Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      Inputs(3)=(InputName="currentVel",Input=(Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      Inputs(4)=(InputName="Mode")
+      Inputs(5)=(InputName="playerPos",Input=(Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      MaterialExpressionEditorX=-272
+      MaterialExpressionEditorY=-1024
+      MaterialExpressionGuid=EEDDDA3B48C11977FB212C8D6C5D29D7
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionCustom_2"
+      Code="#include \"/Project/align.ush\"\r\nreturn 1;"
+      Description="aglin"
+      Inputs(0)=(InputName="PTex")
+      Inputs(1)=(InputName="VTex")
+      Inputs(2)=(InputName="scale")
+      Inputs(3)=(InputName="currentPos",Input=(Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      Inputs(4)=(InputName="currentVel",Input=(Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      MaterialExpressionEditorX=-256
+      MaterialExpressionEditorY=-720
+      MaterialExpressionGuid=4834205C48BD03AC31F42F988E77D0FC
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionCustom_3"
+      Code="#include \"/Project/rangeChecker.ush\"\r\nreturn 1;"
+      Description="RangeChecker"
+      Inputs(0)=(InputName="currentPos",Input=(Expression=MaterialExpressionTextureSample'"VelocityUpdate_mat:MaterialExpressionTextureSample_3"',Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      Inputs(1)=(InputName="currentVel",Input=(Expression=MaterialExpressionTextureSample'"VelocityUpdate_mat:MaterialExpressionTextureSample_1"',Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      Inputs(2)=(InputName="Range",Input=(Expression=MaterialExpressionDivide'"VelocityUpdate_mat:MaterialExpressionDivide_0"'))
+      MaterialExpressionEditorX=-864
+      MaterialExpressionEditorY=336
+      MaterialExpressionGuid=855A5B7E4DF57BDEEE5D7AB2FB58ADE6
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionCustom_4"
+      Code="#include \"/Project/flock.ush\"\r\nreturn 1;"
+      Description="flock"
+      Inputs(0)=(InputName="PTex",Input=(Expression=MaterialExpressionTextureObjectParameter'"VelocityUpdate_mat:MaterialExpressionTextureObjectParameter_0"'))
+      Inputs(1)=(InputName="VTex",Input=(Expression=MaterialExpressionTextureObjectParameter'"VelocityUpdate_mat:MaterialExpressionTextureObjectParameter_1"'))
+      Inputs(2)=(InputName="scale",Input=(Expression=MaterialExpressionTextureProperty'"VelocityUpdate_mat:MaterialExpressionTextureProperty_0"'))
+      Inputs(3)=(InputName="currentPos",Input=(Expression=MaterialExpressionTextureSample'"VelocityUpdate_mat:MaterialExpressionTextureSample_3"',Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      Inputs(4)=(InputName="currentVel",Input=(Expression=MaterialExpressionTextureSample'"VelocityUpdate_mat:MaterialExpressionTextureSample_1"',Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      Inputs(5)=(InputName="Mode",Input=(Expression=MaterialExpressionScalarParameter'"VelocityUpdate_mat:MaterialExpressionScalarParameter_0"'))
+      Inputs(6)=(InputName="playerPos",Input=(Expression=MaterialExpressionVectorParameter'"VelocityUpdate_mat:MaterialExpressionVectorParameter_0"',Mask=1,MaskR=1,MaskG=1,MaskB=1))
+      Inputs(7)=(InputName="separationForceScaler",Input=(Expression=MaterialExpressionScalarParameter'"VelocityUpdate_mat:MaterialExpressionScalarParameter_2"'))
+      Inputs(8)=(InputName="cohesionForceScaler",Input=(Expression=MaterialExpressionScalarParameter'"VelocityUpdate_mat:MaterialExpressionScalarParameter_3"'))
+      Inputs(9)=(InputName="alignForceScaler",Input=(Expression=MaterialExpressionScalarParameter'"VelocityUpdate_mat:MaterialExpressionScalarParameter_4"'))
+      MaterialExpressionEditorX=-320
+      MaterialExpressionEditorY=-272
+      MaterialExpressionGuid=59D4AAE14C387D44C4A46EACE1D6B823
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionDivide_0"
+      A=(Expression=MaterialExpressionCollectionParameter'"VelocityUpdate_mat:MaterialExpressionCollectionParameter_0"')
+      MaterialExpressionEditorX=-1039
+      MaterialExpressionEditorY=597
+      MaterialExpressionGuid=8529AF9B47929F6235EAF58485110D25
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_0"
+      ParameterName="Mode"
+      ExpressionGUID=36D2464A40F248692ACA96907CC84A1B
+      MaterialExpressionEditorX=-864
+      MaterialExpressionEditorY=-624
+      MaterialExpressionGuid=3FC3FC1F47A2BC37EC0C539ED371E21A
+      Material=Material'"VelocityUpdate_mat"'
+      Desc="interact Mode: 0 observer 1 chasing 2 predator"
+      bCommentBubbleVisible=True
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_2"
+      DefaultValue=1.000000
+      ParameterName="separationForceScaler"
+      ExpressionGUID=820A3EA949B68FCE1542AA8C496888E4
+      MaterialExpressionEditorX=-688
+      MaterialExpressionEditorY=32
+      MaterialExpressionGuid=31AE1FAA419632AD6FE82BA6067CEA10
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_3"
+      DefaultValue=1.000000
+      ParameterName="cohesionForceScaler"
+      ExpressionGUID=4702BF874DE474EE92B51DB9620D7623
+      MaterialExpressionEditorX=-672
+      MaterialExpressionEditorY=144
+      MaterialExpressionGuid=31AE1FAA419632AD6FE82BA6067CEA10
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_4"
+      DefaultValue=1.000000
+      ParameterName="alignForceScaler"
+      ExpressionGUID=B6B7028643137634F01E07BA2BD241FB
+      MaterialExpressionEditorX=-672
+      MaterialExpressionEditorY=272
+      MaterialExpressionGuid=31AE1FAA419632AD6FE82BA6067CEA10
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureObjectParameter_0"
+      ParameterName="Position_RT"
+      ExpressionGUID=D93686AC4A9A5DE543295C8640EF7BA6
+      Texture=TextureRenderTarget2D'"/Game/Materials/Position_RT1.Position_RT1"'
+      SamplerType=SAMPLERTYPE_LinearColor
+      MaterialExpressionEditorX=-1536
+      MaterialExpressionEditorY=-256
+      MaterialExpressionGuid=00A8D7CD40720F2E427EC0978970F937
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureObjectParameter_1"
+      ParameterName="Velocity_RT"
+      ExpressionGUID=349E81814C021AF1C4389F88FDEAAFA3
+      Texture=TextureRenderTarget2D'"/Game/Materials/Velocity_RT2.Velocity_RT2"'
+      SamplerType=SAMPLERTYPE_LinearColor
+      MaterialExpressionEditorX=-1504
+      MaterialExpressionEditorY=80
+      MaterialExpressionGuid=00A8D7CD40720F2E427EC0978970F937
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureProperty_0"
+      TextureObject=(Expression=MaterialExpressionTextureObjectParameter'"VelocityUpdate_mat:MaterialExpressionTextureObjectParameter_0"')
+      MaterialExpressionEditorX=-1152
+      MaterialExpressionEditorY=-96
+      MaterialExpressionGuid=E5308B004A247530275875982FBE6565
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_1"
+      TextureObject=(Expression=MaterialExpressionTextureObjectParameter'"VelocityUpdate_mat:MaterialExpressionTextureObjectParameter_1"')
+      SamplerType=SAMPLERTYPE_LinearColor
+      MaterialExpressionEditorX=-1200
+      MaterialExpressionEditorY=32
+      MaterialExpressionGuid=42CB6386497E052E3226E4AC6507F18D
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_3"
+      TextureObject=(Expression=MaterialExpressionTextureObjectParameter'"VelocityUpdate_mat:MaterialExpressionTextureObjectParameter_0"')
+      SamplerType=SAMPLERTYPE_LinearColor
+      MaterialExpressionEditorX=-1200
+      MaterialExpressionEditorY=-336
+      MaterialExpressionGuid=42CB6386497E052E3226E4AC6507F18D
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="MaterialExpressionVectorParameter_0"
+      DefaultValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+      ParameterName="PlayerPos"
+      ExpressionGUID=0635FEDA4A40B8E2430E309A63B30D12
+      MaterialExpressionEditorX=-1104
+      MaterialExpressionEditorY=-656
+      MaterialExpressionGuid=C862B006435D8473F4D67780574AF2A2
+      Material=Material'"VelocityUpdate_mat"'
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   EmissiveColor=(Expression=MaterialExpressionAdd'"MaterialExpressionAdd_1"')
+   ShadingModel=MSM_Unlit
+   ShadingModels=(ShadingModelField=1)
+   bAllowNegativeEmissiveColor=True
+   EditorX=592
+   EditorY=-272
+   Expressions(0)=MaterialExpressionCustom'"MaterialExpressionCustom_0"'
+   Expressions(1)=MaterialExpressionTextureObjectParameter'"MaterialExpressionTextureObjectParameter_0"'
+   Expressions(2)=MaterialExpressionTextureObjectParameter'"MaterialExpressionTextureObjectParameter_1"'
+   Expressions(3)=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_1"'
+   Expressions(4)=MaterialExpressionTextureProperty'"MaterialExpressionTextureProperty_0"'
+   Expressions(5)=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_3"'
+   Expressions(6)=MaterialExpressionCustom'"MaterialExpressionCustom_1"'
+   Expressions(7)=MaterialExpressionCustom'"MaterialExpressionCustom_2"'
+   Expressions(8)=MaterialExpressionCustom'"MaterialExpressionCustom_3"'
+   Expressions(9)=MaterialExpressionCollectionParameter'"MaterialExpressionCollectionParameter_0"'
+   Expressions(10)=MaterialExpressionDivide'"MaterialExpressionDivide_0"'
+   Expressions(11)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_2"'
+   Expressions(12)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_3"'
+   Expressions(13)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_4"'
+   Expressions(14)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_0"'
+   Expressions(15)=MaterialExpressionVectorParameter'"MaterialExpressionVectorParameter_0"'
+   Expressions(16)=MaterialExpressionCustom'"MaterialExpressionCustom_4"'
+   Expressions(17)=MaterialExpressionAdd'"MaterialExpressionAdd_1"'
+   EditorComments(0)=MaterialExpressionComment'"MaterialExpressionComment_1"'
+   ParameterGroupData(0)=(GroupName="None")
+   ParameterGroupData(1)=(GroupName="None")
+   ParameterGroupData(2)=(GroupName="None")
+   ParameterGroupData(3)=(GroupName="None")
+   ParameterGroupData(4)=(GroupName="None")
+   ParameterGroupData(5)=(GroupName="None")
+   ParameterGroupData(6)=(GroupName="None")
+   bCanMaskedBeAssumedOpaque=True
+   StateId=81C684A34993BFC4F8BBEE9436F44D8F
+   CachedExpressionData=(Parameters=(Entries[0]=(NameHashes=(2841308518837599091,7615624786432519141,11304685114731999608,18312746266753771300),ParameterInfos=((Name="separationForceScaler"),(Name="cohesionForceScaler"),(Name="Mode"),(Name="alignForceScaler")),ExpressionGuids=(820A3EA949B68FCE1542AA8C496888E4,4702BF874DE474EE92B51DB9620D7623,36D2464A40F248692ACA96907CC84A1B,B6B7028643137634F01E07BA2BD241FB),Overrides=(False,False,False,False)),Entries[1]=(NameHashes=(15568846210321412399),ParameterInfos=((Name="PlayerPos")),ExpressionGuids=(0635FEDA4A40B8E2430E309A63B30D12),Overrides=(False)),Entries[2]=(NameHashes=(7418891769985797544,13346035630403799150),ParameterInfos=((Name="Velocity_RT"),(Name="Position_RT")),ExpressionGuids=(349E81814C021AF1C4389F88FDEAAFA3,D93686AC4A9A5DE543295C8640EF7BA6),Overrides=(False,False)),ScalarValues=(1.000000,1.000000,0.000000,1.000000),VectorValues=((R=0.000000,G=0.000000,B=0.000000,A=1.000000)),TextureValues=(TextureRenderTarget2D'"/Game/Materials/Velocity_RT2.Velocity_RT2"',TextureRenderTarget2D'"/Game/Materials/Position_RT1.Position_RT1"'),ScalarMinMaxValues=((X=0.000000,Y=0.000000),(X=0.000000,Y=0.000000),(X=0.000000,Y=0.000000),(X=0.000000,Y=0.000000)),ScalarCurveValues=(None,None,None,None),ScalarCurveAtlasValues=(None,None,None,None),VectorChannelNameValues=(()),VectorUsedAsChannelMaskValues=(False),TextureChannelNameValues=((),())),ReferencedTextures=(TextureRenderTarget2D'"/Game/Materials/Position_RT1.Position_RT1"',TextureRenderTarget2D'"/Game/Materials/Velocity_RT2.Velocity_RT2"',None),ParameterCollectionInfos=((StateId=F47EE4514EF8FF3624907AAE748354A4,ParameterCollection=MaterialParameterCollection'"/Game/Materials/ParametersCollection.ParametersCollection"')),QualityLevelsUsed=(False,True,False))
+   ReferencedTextureGuids(0)=821316C94F0C72C5A44200BC9AB715DA
+   ReferencedTextureGuids(1)=B73D87CF476A505F4DF07E999C7461C9
+   ThumbnailInfo=SceneThumbnailInfoWithPrimitive'"SceneThumbnailInfoWithPrimitive_0"'
+   ParameterOverviewExpansion=(("-12None", True))
+   LightingGuid=C019F7C04E4789AE4606E2BE4E73B039
+End Object

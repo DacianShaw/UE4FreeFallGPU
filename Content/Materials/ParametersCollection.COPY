@@ -1,0 +1,8 @@
+Begin Object Class=/Script/Engine.MaterialParameterCollection Name="ParametersCollection"
+   ScalarParameters(0)=(DefaultValue=4096.000000,ParameterName="Range",Id=EC910D914AAD72C359AD7A84BB4D456E)
+   VectorParameters(0)=(Id=E9BCAA134E6F6CAA0BB30D9B4D84EBC6)
+   VectorParameters(1)=(ParameterName="Vector1",Id=E29C2E2245F3B68628F9AA9A60F4C064)
+   VectorParameters(2)=(ParameterName="Vector2",Id=B5320F3F4CBD8B3B910F7F892453F1DF)
+   VectorParameters(3)=(ParameterName="Vector3",Id=724756F543616FF2B16673AEBE55D89A)
+   VectorParameters(4)=(ParameterName="Vector4",Id=71CB9FF047DDE7B85D6E468853916793)
+End Object
